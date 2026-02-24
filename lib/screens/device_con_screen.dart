@@ -9,10 +9,10 @@ class DeviceConnectionScreen extends StatefulWidget {
 }
 
 class _DeviceConnectionScreenState extends State<DeviceConnectionScreen> {
-  // 1. Define the state variable
+  
   bool _isConnecting = false;
 
-  // 2. Create the connection simulation method
+  
   Future<void> _connectDevice() async {
     // Update the UI to show loading
     setState(() {
@@ -141,7 +141,7 @@ class _DeviceConnectionScreenState extends State<DeviceConnectionScreen> {
                       style: ElevatedButton.styleFrom(
                         backgroundColor: const Color(0xFF4A2B70),
                         foregroundColor: Colors.white,
-                        disabledBackgroundColor: const Color(0xFF4A2B70).withOpacity(0.7),
+                        disabledBackgroundColor: const Color(0xFF4A2B70).withValues(alpha: .7),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(30),
                         ),
