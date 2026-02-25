@@ -48,6 +48,15 @@ class _DeviceConnectionScreenState extends State<DeviceConnectionScreen> {
     return Scaffold(
       body: Stack(
         children: [
+          Center(
+            child: Image.asset(
+              'assets/images/connect_ro.jpg',
+              height: 400,
+              // Ensure it covers space if needed, though 'contain' is usually safer for mascots
+              fit: BoxFit.contain, 
+            ),
+          ),
+      
           // --- Background Shapes ---
           Positioned(
             bottom: -100,
@@ -85,6 +94,7 @@ class _DeviceConnectionScreenState extends State<DeviceConnectionScreen> {
               ),
             ),
           ),
+          
 
           // --- Foreground Content ---
           SafeArea(
@@ -92,7 +102,7 @@ class _DeviceConnectionScreenState extends State<DeviceConnectionScreen> {
               children: [
                 // Top Right Text & Underline
                 Padding(
-                  padding: const EdgeInsets.only(top: 20.0, right: 30.0),
+                  padding: const EdgeInsets.only(top: 20.0, right: 100.0),
                   child: Align(
                     alignment: Alignment.topRight,
                     child: Column(
@@ -102,7 +112,7 @@ class _DeviceConnectionScreenState extends State<DeviceConnectionScreen> {
                           'Device\nConnection',
                           textAlign: TextAlign.center,
                           style: TextStyle(
-                            fontSize: 18,
+                            fontSize: 36,
                             fontWeight: FontWeight.bold,
                             color: AppColors.darkText,
                           ),
@@ -110,7 +120,7 @@ class _DeviceConnectionScreenState extends State<DeviceConnectionScreen> {
                         const SizedBox(height: 4),
                         Container(
                           height: 2,
-                          width: 100,
+                          width: 200,
                           color: AppColors.fieldPurple,
                         ),
                       ],
@@ -121,13 +131,9 @@ class _DeviceConnectionScreenState extends State<DeviceConnectionScreen> {
                 const Spacer(),
 
                 // Mascot & Logo Image
-                Image.asset(
-                  'assets/images/aerocare_mascot.png', 
-                  height: 250,
-                  fit: BoxFit.contain,
-                ),
                 
-                const SizedBox(height: 40),
+                
+                const SizedBox(height: 300),
 
                 // Connect Button
                 Padding(
